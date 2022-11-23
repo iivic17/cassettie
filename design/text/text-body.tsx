@@ -1,32 +1,40 @@
-import { HTMLAttributes } from "react";
+import { ElementType } from "react";
 import classNames from "classnames";
+import { PolymorphicComponentProps } from "../../types";
 
-interface TextBodyProps
-  extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
-  span?: boolean;
-  type: "s" | "m";
-}
+type Variants = {
+  s: string;
+  m: string;
+};
 
-export const TextBody = ({
-  span,
+type TextBodyProps = {
+  type: keyof Variants;
+};
+
+const textBodyClassNames: Variants = {
+  s: "text-body-s font-light leading-relaxed",
+  m: "text-body-m font-light leading-relaxed",
+};
+
+const defaultComponent = "span";
+
+export const TextBody = <
+  Component extends ElementType = typeof defaultComponent
+>({
+  as,
   type,
   className,
   children,
   ...props
-}: TextBodyProps) => {
-  const textBodyClassNames = {
-    s: "text-body-s font-light leading-relaxed",
-    m: "text-body-m font-light leading-relaxed",
-  };
-
-  const TextBodyElement = span ? "span" : "p";
+}: PolymorphicComponentProps<Component, TextBodyProps>) => {
+  const Component = as || defaultComponent;
 
   return (
-    <TextBodyElement
+    <Component
       {...props}
       className={classNames(textBodyClassNames[type], className)}
     >
       {children}
-    </TextBodyElement>
+    </Component>
   );
 };
