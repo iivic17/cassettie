@@ -1,1 +1,2 @@
-export { HeadingL } from "./text/HeadingL";
+export { TextHeading } from "./text/text-heading";
+export { TextBody } from "./text/text-body";
