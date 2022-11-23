@@ -15,8 +15,8 @@ export const TextBody = ({
   ...props
 }: TextBodyProps) => {
   const textBodyClassNames = {
-    s: "text-body-s font-light leading-relaxed max-w-sm",
-    m: "text-body-m font-light leading-relaxed max-w-sm",
+    s: "text-body-s font-light leading-relaxed",
+    m: "text-body-m font-light leading-relaxed",
   };
 
   const TextBodyElement = span ? "span" : "p";

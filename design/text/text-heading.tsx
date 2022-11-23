@@ -15,10 +15,10 @@ export const TextHeading = ({
   ...props
 }: TextBodyProps) => {
   const textHeadingClassNames = {
-    xs: "text-heading-xs font-medium leading-relaxed max-w-sm",
-    s: "text-heading-s font-medium leading-normal max-w-sm",
-    m: "text-heading-m font-light leading-snug max-w-sm",
-    l: "text-heading-l font-light leading-tight max-w-sm",
+    xs: "text-heading-xs font-medium leading-relaxed",
+    s: "text-heading-s font-medium leading-normal",
+    m: "text-heading-m font-light leading-snug",
+    l: "text-heading-l font-light leading-tight",
   };
 
   const getHeadingElement = () => {
