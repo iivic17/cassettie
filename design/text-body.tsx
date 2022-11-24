@@ -1,17 +1,14 @@
 import { ElementType } from "react";
 import classNames from "classnames";
-import { PolymorphicComponentProps } from "../types";
+import { PolymorphicComponentProps, TextVariants } from "../types";
 
-type Variants = {
-  s: string;
-  m: string;
-};
+type TextHeadingVariants = Pick<TextVariants<string>, "s" | "m">;
 
 type TextBodyProps = {
-  type: keyof Variants;
+  type: keyof TextHeadingVariants;
 };
 
-const textBodyClassNames: Variants = {
+const textBodyClassNames: TextHeadingVariants = {
   s: "text-body-s font-light leading-relaxed",
   m: "text-body-m font-light leading-relaxed",
 };
