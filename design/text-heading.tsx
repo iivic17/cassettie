@@ -5,7 +5,7 @@ import { PolymorphicComponentProps, TextVariants } from "../types";
 type TextHeadingVariants = Pick<TextVariants<string>, "xs" | "s" | "m" | "l">;
 
 type TextHeadingProps = {
-  type: keyof TextHeadingVariants;
+  variant: keyof TextHeadingVariants;
 };
 
 const textHeadingClassNames: TextHeadingVariants = {
@@ -21,7 +21,7 @@ export const TextHeading = <
   Component extends ElementType = typeof defaultComponent
 >({
   as,
-  type,
+  variant,
   className,
   children,
   ...props
@@ -31,7 +31,7 @@ export const TextHeading = <
   return (
     <Component
       {...props}
-      className={classNames(textHeadingClassNames[type], className)}
+      className={classNames(textHeadingClassNames[variant], className)}
     >
       {children}
     </Component>
