@@ -1,6 +1,6 @@
 import { ElementType } from "react";
 import classNames from "classnames";
-import { PolymorphicComponentProps } from "../../types";
+import { PolymorphicComponentProps } from "../types";
 
 type Variants = {
   s: string;
