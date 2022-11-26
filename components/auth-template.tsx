@@ -11,13 +11,7 @@ export const AuthTemplate = ({
   ...props
 }: ComponentPropsWithChildren<"div", AuthTemplateProps>) => {
   return (
-    <div
-      className={classNames(
-        "relative flex min-h-[100vh] flex-1 flex-col items-center bg-blue-dark",
-        className
-      )}
-      {...props}
-    >
+    <div className="relative flex min-h-[100vh] flex-1 flex-col items-center bg-blue-dark">
       <Image
         src="/assets/logo.svg"
         alt="logo"
@@ -25,7 +19,13 @@ export const AuthTemplate = ({
         height={27}
         className="mt-16"
       />
-      <div className="mt-20 rounded-2xl bg-blue-medium py-8 px-7">
+      <div
+        className={classNames(
+          "mt-20 flex w-[400px] flex-col rounded-2xl bg-blue-medium py-8 px-9",
+          className
+        )}
+        {...props}
+      >
         {children}
       </div>
     </div>
