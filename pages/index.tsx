@@ -19,46 +19,6 @@ const Home = () => (
       </TextBody>
       <Input />
     </div>
-    <div className="flex max-w-lg flex-1 flex-col items-center justify-center gap-4 rounded-xl bg-blue-medium px-9 py-12">
-      <div className="aspect-1 w-20 rounded-full bg-blue-light" />
-      <TextHeading className="mt-3 text-center text-white" variant="l">
-        Lorem ipsum dolor sit amet.
-      </TextHeading>
-      <TextBody className="text-white" variant="s"></TextBody>
-      <TextBody
-        variant="m"
-        className="max-w-md text-center text-heading-l font-light leading-6 text-white"
-        as={Link}
-        href=""
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, veniam
-        eius laborum quas accusantium recusandae nulla sed aperiam fugiat qui
-        commodi. Deleniti, dolorem. Consectetur in quisquam enim at labore fuga
-        minima beatae laudantium magni sint eveniet sed laborum nostrum
-        exercitationem, consequatur impedit commodi voluptatum dolorum voluptas
-        tempora saepe ipsum? Accusantium dicta dolorum nobis officiis commodi
-        voluptate ratione ipsum illo distinctio.
-      </TextBody>
-      <Button>Text</Button>
-    </div>
-    <div className="flex max-w-lg flex-1 flex-col items-center justify-center gap-4 rounded-xl bg-blue-medium px-9 py-12">
-      <div className="aspect-1 w-20 rounded-full bg-red" />
-      <TextHeading className="mt-3 text-center text-white" variant="xs">
-        Lorem ipsum dolor sit amet.
-      </TextHeading>
-      <TextBody
-        variant="s"
-        className="max-w-md text-center text-body-s font-light leading-6 text-white"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, veniam
-        eius laborum quas accusantium recusandae nulla sed aperiam fugiat qui
-        commodi. Deleniti, dolorem. Consectetur in quisquam enim at labore fuga
-        minima beatae laudantium magni sint eveniet sed laborum nostrum
-        exercitationem, consequatur impedit commodi voluptatum dolorum voluptas
-        tempora saepe ipsum? Accusantium dicta dolorum nobis officiis commodi
-        voluptate ratione ipsum illo distinctio.
-      </TextBody>
-    </div>
   </div>
 );
 
