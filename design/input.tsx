@@ -9,9 +9,10 @@ type InputProps = {
 export const Input = ({
   className,
   containerClassName,
+  placeholder,
   ...props
 }: ComponentPropsWithoutChildren<"input", InputProps>) => {
-  const hasError = true;
+  const hasError = false;
 
   const renderErrorMessage = () => (
     <div className="absolute top-1/2 right-6 z-10 flex h-3/4 -translate-y-1/2 items-center justify-center bg-[inherit] pl-3">
@@ -34,7 +35,7 @@ export const Input = ({
           },
           className
         )}
-        placeholder="Email address"
+        placeholder={placeholder}
       />
       {hasError && renderErrorMessage()}
     </div>

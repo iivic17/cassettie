@@ -1,23 +1,31 @@
 import Link from "next/link";
 import { Input, TextBody, TextHeading } from "../design";
 import { Button } from "../design/button";
+import Image from "next/image";
 
 const Home = () => (
   <div className="flex h-screen w-full items-center justify-center gap-10 bg-blue-dark">
     <div className="flex max-w-lg flex-1 flex-col items-center justify-center gap-4 rounded-xl bg-blue-medium px-9 py-12">
-      <div className="aspect-1 w-20 rounded-full bg-red" />
-      <TextHeading className="mt-3 text-center text-white" variant="l">
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Incidunt sint non fugit rem odio, repellat et
-        blanditiis porro natus asperiores!
+      <div className="flex aspect-1 w-20 items-center justify-center rounded-full bg-blue-light">
+        <Image
+          src="/assets/icon-bookmark-empty.svg"
+          alt="icon"
+          width={30}
+          height={30}
+        />
+      </div>
+      <TextHeading className="text-white" variant="m">
+        Lorem ipsum dolor sit amet
       </TextHeading>
-      <TextBody className="text-heading-l text-white" variant="m" as="p">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates,
-        asperiores quaerat blanditiis eveniet possimus dolorem quas odio,
-        mollitia veniam iure excepturi reprehenderit sint fuga! Facilis autem
-        aperiam at, vitae recusandae similique.
+      <TextBody variant="s" as="p" className="text-clip text-center text-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facere
+        illo, ullam iure nostrum unde, repellendus temporibus quod, incidunt
+        optio consectetur enim perferendis assumenda itaque eum in ducimus
+        tempora?
       </TextBody>
-      <Input />
+      <Input placeholder="Email address" type="email" />
+      <Input placeholder="Password" type="password" />
+      <Button className="mt-6">Lorem ipsum dolor sit amet.</Button>
     </div>
   </div>
 );
