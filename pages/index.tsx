@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TextBody, TextHeading } from "../design";
+import { Input, TextBody, TextHeading } from "../design";
 import { Button } from "../design/button";
 
 const Home = () => (
@@ -17,6 +17,7 @@ const Home = () => (
         mollitia veniam iure excepturi reprehenderit sint fuga! Facilis autem
         aperiam at, vitae recusandae similique.
       </TextBody>
+      <Input />
     </div>
     <div className="flex max-w-lg flex-1 flex-col items-center justify-center gap-4 rounded-xl bg-blue-medium px-9 py-12">
       <div className="aspect-1 w-20 rounded-full bg-blue-light" />

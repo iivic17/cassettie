@@ -12,6 +12,8 @@ module.exports = {
       "blue-medium": "rgb(22, 29, 47)",
       "blue-light": "rgb(90, 105, 143)",
       white: "rgb(255, 255, 255)",
+      "white-light": "rgb(255, 255, 255, .5)",
+      transparent: "transparent",
     },
     fontFamily: {
       sans: ["Outfit", "sans-serif"],
