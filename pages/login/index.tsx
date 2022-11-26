@@ -1,3 +1,7 @@
-const Login = () => <div>Login</div>;
+import { AuthTemplate } from "../../components";
+
+const Login = () => {
+  return <AuthTemplate></AuthTemplate>;
+};
 
 export default Login;
