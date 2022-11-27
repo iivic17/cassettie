@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AuthTemplate } from "../../components";
-import { Input, TextBody, TextHeading, Button } from "../../design";
+import { LoginForm } from "../../components/login-form";
+import { TextBody, TextHeading } from "../../design";
 
 const Login = () => {
   return (
@@ -8,11 +9,7 @@ const Login = () => {
       <TextHeading variant="l" className="text-white">
         Login
       </TextHeading>
-      <div className="mt-8 flex flex-col gap-3">
-        <Input placeholder="Email address" type="email" />
-        <Input placeholder="Password" type="password" />
-      </div>
-      <Button className="mt-10">Login to your account</Button>
+      <LoginForm className="mt-8" />
       <div className="mt-7 flex flex-row items-center justify-center gap-2">
         <TextBody variant="m" className="text-white">
           Don&apos;t have an account?
