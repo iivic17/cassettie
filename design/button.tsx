@@ -22,13 +22,13 @@ export const Button = <
       {...props}
       role="button"
       className={classNames(
-        "pointer group flex h-12 w-full items-center justify-center rounded-md bg-red transition-colors hover:bg-white",
+        "pointer group flex h-12 w-full items-center justify-center rounded-md bg-red transition-colors hover:bg-white disabled:opacity-60 disabled:hover:bg-red",
         className
       )}
     >
       <TextBody
         variant="m"
-        className="text-white transition-colors group-hover:text-blue-medium"
+        className="text-white transition-colors group-hover:text-blue-medium group-disabled:group-hover:text-white"
       >
         {children}
       </TextBody>
