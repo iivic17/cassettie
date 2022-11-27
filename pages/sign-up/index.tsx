@@ -4,10 +4,7 @@ import { Input, TextBody, TextHeading, Button } from "../../design";
 
 const SignUp = () => {
   return (
-    <AuthTemplate>
-      <TextHeading variant="l" className="text-white">
-        Sign Up
-      </TextHeading>
+    <AuthTemplate heading="Sign up">
       <div className="mt-8 flex flex-col gap-3">
         <Input placeholder="Email address" type="email" />
         <Input placeholder="Password" type="password" />

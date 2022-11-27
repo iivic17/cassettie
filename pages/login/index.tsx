@@ -5,10 +5,7 @@ import { TextBody, TextHeading } from "../../design";
 
 const Login = () => {
   return (
-    <AuthTemplate>
-      <TextHeading variant="l" className="text-white">
-        Login
-      </TextHeading>
+    <AuthTemplate heading="Login">
       <LoginForm className="mt-8" />
       <div className="mt-7 flex flex-row items-center justify-center gap-2">
         <TextBody variant="m" className="text-white">

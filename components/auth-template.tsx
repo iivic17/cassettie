@@ -1,12 +1,16 @@
 import classNames from "classnames";
 import Image from "next/image";
+import { TextHeading } from "../design";
 import { ComponentPropsWithChildren } from "../types";
 import logo from "/assets/logo.svg";
 
-type AuthTemplateProps = {};
+type AuthTemplateProps = {
+  heading: string;
+};
 
 export const AuthTemplate = ({
   className,
+  heading,
   children,
   ...props
 }: ComponentPropsWithChildren<"div", AuthTemplateProps>) => {
@@ -26,6 +30,9 @@ export const AuthTemplate = ({
         )}
         {...props}
       >
+        <TextHeading variant="l" className="text-white">
+          {heading}
+        </TextHeading>
         {children}
       </div>
     </div>
