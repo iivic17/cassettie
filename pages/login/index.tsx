@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { AuthTemplate } from "../../components";
-import { LoginForm } from "../../components/login-form";
-import { TextBody, TextHeading } from "../../design";
+import { AuthTemplate, LoginForm } from "../../components";
+import { TextBody } from "../../design";
 
 const Login = () => {
   return (

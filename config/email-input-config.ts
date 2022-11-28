@@ -1,4 +1,3 @@
-import { Inputs } from "./../types/inputs";
 import { ReactHookInputConfig } from "../types";
 
 export const emailInputConfig: ReactHookInputConfig<"email"> = {

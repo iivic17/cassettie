@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { Input, TextBody, TextHeading } from "../design";
-import { Button } from "../design/button";
+import { Button, Input, TextBody, TextHeading } from "../design";
 import Image from "next/image";
 
 const Home = () => (

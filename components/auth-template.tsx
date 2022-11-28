@@ -2,7 +2,6 @@ import classNames from "classnames";
 import Image from "next/image";
 import { TextHeading } from "../design";
 import { ComponentPropsWithChildren } from "../types";
-import logo from "/assets/logo.svg";
 
 type AuthTemplateProps = {
   heading: string;

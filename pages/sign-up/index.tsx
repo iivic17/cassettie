@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AuthTemplate } from "../../components";
-import { Input, TextBody, TextHeading, Button } from "../../design";
+import { Input, TextBody, Button } from "../../design";
 
 const SignUp = () => {
   return (
