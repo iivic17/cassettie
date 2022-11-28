@@ -1,20 +1,14 @@
 import classNames from "classnames";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { Button, Input } from "../design";
-import { ComponentPropsWithChildren, ReactHookFormConfig } from "../types";
+import { ComponentPropsWithChildren, Inputs } from "../types";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { emailInputConfig, passwordInputConfig } from "../config";
 
 type LoginFormProps = {};
 
-type Inputs = {
-  email: string;
-  password: string;
-};
+type LoginFormInputs = Pick<Inputs, "email" | "password">;
 
-const loginFormConfig: ReactHookFormConfig = [
-  emailInputConfig,
-  passwordInputConfig,
-];
+const loginFormConfig = [emailInputConfig, passwordInputConfig];
 
 export const LoginForm = ({
   className,
@@ -24,13 +18,13 @@ export const LoginForm = ({
     register,
     handleSubmit,
     formState: { isValid, errors, touchedFields },
-  } = useForm<Inputs>({
+  } = useForm<LoginFormInputs>({
     mode: "onChange",
     shouldUseNativeValidation: false,
     shouldFocusError: true,
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<LoginFormInputs> = (data) => console.log(data);
 
   const renderInputs = () =>
     loginFormConfig.map((item) => (

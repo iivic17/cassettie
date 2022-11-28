@@ -1,6 +1,6 @@
 import { ReactHookInputConfig } from "../types";
 
-export const passwordInputConfig: ReactHookInputConfig = {
+export const passwordInputConfig: ReactHookInputConfig<"password"> = {
   name: "password",
   type: "password",
   placeholder: "Password",
@@ -14,4 +14,4 @@ export const passwordInputConfig: ReactHookInputConfig = {
       message: "Not long enough",
     },
   },
-} as const;
+};

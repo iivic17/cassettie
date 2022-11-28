@@ -1,6 +1,7 @@
+import { Inputs } from "./../types/inputs";
 import { ReactHookInputConfig } from "../types";
 
-export const emailInputConfig: ReactHookInputConfig = {
+export const emailInputConfig: ReactHookInputConfig<"email"> = {
   name: "email",
   type: "email",
   placeholder: "Email address",
@@ -14,4 +15,4 @@ export const emailInputConfig: ReactHookInputConfig = {
       message: "Enter valid email",
     },
   },
-} as const;
+};
