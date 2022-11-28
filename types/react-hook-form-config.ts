@@ -1,9 +1,3 @@
-import { HTMLInputTypeAttribute } from "react";
-import { RegisterOptions } from "react-hook-form";
+import { ReactHookInputConfig } from "./react-hook-input-config";
 
-export type ReactHookFormConfig<Inputs extends {}> = {
-  name: keyof Inputs;
-  type: HTMLInputTypeAttribute;
-  placeholder?: string;
-  options?: RegisterOptions;
-}[];
+export type ReactHookFormConfig = Array<ReactHookInputConfig>;

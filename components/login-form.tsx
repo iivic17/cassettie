@@ -1,8 +1,8 @@
 import classNames from "classnames";
-import { Button, Input } from "../design";
-import { ComponentPropsWithChildren } from "../types";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { ReactHookFormConfig } from "../types/react-hook-form-config";
+import { Button, Input } from "../design";
+import { ComponentPropsWithChildren, ReactHookFormConfig } from "../types";
+import { emailInputConfig, passwordInputConfig } from "../config";
 
 type LoginFormProps = {};
 
@@ -11,37 +11,9 @@ type Inputs = {
   password: string;
 };
 
-const loginFormConfig: ReactHookFormConfig<Inputs> = [
-  {
-    name: "email",
-    type: "email",
-    placeholder: "Email address",
-    options: {
-      required: {
-        value: true,
-        message: "Can't be empty",
-      },
-      pattern: {
-        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-        message: "Enter valid email",
-      },
-    },
-  },
-  {
-    name: "password",
-    type: "password",
-    placeholder: "Password",
-    options: {
-      required: {
-        value: true,
-        message: "Can't be empty",
-      },
-      minLength: {
-        value: 6,
-        message: "Not long enough",
-      },
-    },
-  },
+const loginFormConfig: ReactHookFormConfig = [
+  emailInputConfig,
+  passwordInputConfig,
 ];
 
 export const LoginForm = ({
