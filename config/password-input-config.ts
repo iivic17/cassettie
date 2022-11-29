@@ -13,5 +13,6 @@ export const passwordInputConfig: ReactHookInputConfig<"password"> = {
       value: 6,
       message: "Not long enough",
     },
+    deps: ["repeatPassword"],
   },
 };

@@ -5,5 +5,5 @@ export type ReactHookInputConfig<T> = {
   name: T;
   type: HTMLInputTypeAttribute;
   placeholder?: string;
-  options?: RegisterOptions;
+  options: RegisterOptions;
 };
