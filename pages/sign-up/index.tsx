@@ -1,26 +1,21 @@
 import Link from "next/link";
-import { AuthTemplate } from "../../components";
-import { Input, TextBody, Button } from "../../design";
+import { AuthTemplate, SignUpForm } from "../../components";
+import { TextBody } from "../../design";
 
-const SignUp = () => {
+const Login = () => {
   return (
-    <AuthTemplate heading="Sign up">
-      <div className="mt-8 flex flex-col gap-3">
-        <Input placeholder="Email address" type="email" />
-        <Input placeholder="Password" type="password" />
-        <Input placeholder="Repeat password" type="password" />
-      </div>
-      <Button className="mt-10">Create an account</Button>
+    <AuthTemplate heading="Sign Up">
+      <SignUpForm className="mt-8" />
       <div className="mt-7 flex flex-row items-center justify-center gap-2">
         <TextBody variant="m" className="text-white">
           Already have an account?
         </TextBody>
-        <TextBody variant="m" className="text-red" as={Link} href="/login">
-          Login
+        <TextBody variant="m" className="text-red" as={Link} href="/sign-up">
+          Sign Up
         </TextBody>
       </div>
     </AuthTemplate>
   );
 };
 
-export default SignUp;
+export default Login;
