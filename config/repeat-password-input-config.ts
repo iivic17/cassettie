@@ -1,5 +1,4 @@
 import { ReactHookInputConfig } from "../types";
-import { Inputs } from "./../types/inputs";
 import { UseFormWatch } from "react-hook-form";
 
 const repeatPasswordInputConfig: ReactHookInputConfig<"repeatPassword"> = {

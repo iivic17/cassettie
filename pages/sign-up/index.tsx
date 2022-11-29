@@ -10,8 +10,8 @@ const Login = () => {
         <TextBody variant="m" className="text-white">
           Already have an account?
         </TextBody>
-        <TextBody variant="m" className="text-red" as={Link} href="/sign-up">
-          Sign Up
+        <TextBody variant="m" className="text-red" as={Link} href="/login">
+          Login
         </TextBody>
       </div>
     </AuthTemplate>
