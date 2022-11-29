@@ -1,23 +1,16 @@
 import classNames from "classnames";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { Button, Input } from "../design";
 import { ComponentPropsWithChildren, Inputs } from "../types";
-import { useForm, SubmitHandler } from "react-hook-form";
 import {
   emailInputConfig,
   passwordInputConfig,
-  repeatPasswordInputConfig,
+  createRepeatPasswordInputConfig,
 } from "../config";
-import { useRef } from "react";
 
 type SignUpFormProps = {};
 
 type SignUpFormInputs = Pick<Inputs, "email" | "password" | "repeatPassword">;
-
-const signUpFormConfig = [
-  emailInputConfig,
-  passwordInputConfig,
-  repeatPasswordInputConfig,
-];
 
 export const SignUpForm = ({
   className,
@@ -25,8 +18,8 @@ export const SignUpForm = ({
 }: ComponentPropsWithChildren<"form", SignUpFormProps>) => {
   const {
     register,
-    handleSubmit,
     watch,
+    handleSubmit,
     formState: { isValid, errors, touchedFields },
   } = useForm<SignUpFormInputs>({
     mode: "onChange",
@@ -34,32 +27,26 @@ export const SignUpForm = ({
     shouldFocusError: true,
   });
 
+  const signUpFormConfig = [
+    emailInputConfig,
+    passwordInputConfig,
+    createRepeatPasswordInputConfig(watch),
+  ];
+
   const onSubmit: SubmitHandler<SignUpFormInputs> = (data) => console.log(data);
 
   const renderInputs = () =>
-    signUpFormConfig.map((item) => {
-      if (item.name === "repeatPassword") {
-        item.options.validate = (value: string) => {
-          if (watch("password") != value) {
-            return "Passwords don't match";
-          }
-        };
-      }
-
-      return (
-        <Input
-          key={item.name}
-          {...register(item.name, item.options)}
-          placeholder={item.placeholder}
-          type={item.type}
-          errorMessage={
-            !isValid && touchedFields[item.name]
-              ? errors[item.name]?.message
-              : ""
-          }
-        />
-      );
-    });
+    signUpFormConfig.map((item) => (
+      <Input
+        key={item.name}
+        {...register(item.name, item.options)}
+        placeholder={item.placeholder}
+        type={item.type}
+        errorMessage={
+          !isValid && touchedFields[item.name] ? errors[item.name]?.message : ""
+        }
+      />
+    ));
 
   return (
     <form
